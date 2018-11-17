@@ -1,0 +1,17 @@
+{
+  "APP_NAME": "ראובן שוורץ",
+  "About": "אודות",
+  "Hello world !": "שלום עולם !",
+  "Home": "בית",
+  "Gallery": "גלריה",
+  "Logged in as": "מחובר כ",
+  "Login": "חיבור",
+  "Logout": "יציאה",
+  "Password": "סיסמה",
+  "Password is required": "נדרשת סיסמה",
+  "Username": "שם משתמש",
+  "Username is required": "נדרש שם משתמש",
+  "Username or password incorrect.": "שם משתמש או סיסמה לא נכונים.",
+  "Remember me": "זכור אותי",
+  "Version": "גרסה"
+}
