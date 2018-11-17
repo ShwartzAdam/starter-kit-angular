@@ -6,8 +6,10 @@ import { ShellComponent } from './shell.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,BrowserAnimationsModule ],
   declarations: [HeaderComponent, ShellComponent, FooterComponent]
 })
 export class ShellModule {}
