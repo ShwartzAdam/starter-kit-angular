@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {finalize} from "rxjs/operators";
-import {GalleryService, Image} from "@app/gallery/gallery.service";
+import {GalleryService} from "@app/gallery/gallery.service";
 import {Observable} from "rxjs/internal/Observable";
 
 @Component({
@@ -10,20 +10,29 @@ import {Observable} from "rxjs/internal/Observable";
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  categories: any;
+  images: any;
+
+  isArrowDownClicked: boolean;
+  isToggle: boolean;
+  constructor(private galleryService: GalleryService) { }
 
   ngOnInit() {
-    // this.isLoading = true;
-    // this.galleryService
-    //   .getImagesSec()
-    //   .pipe(
-    //     finalize(() => {
-    //       this.isLoading = false;
-    //     })
-    //   )
-    //   .subscribe((images: Image[]) => {
-    //     this.images = images;
-    //   });
+    this.categories = [
+      {name: 'Art' , url:'/art'},
+      {name: 'Sport' , url:'/sport'},
+      {name: 'Kibbutz' , url:'/kibbutz'},
+      {name: 'Army' , url:'/army'},
+      {name: 'Portraits' , url:'/portraits'}
+    ];
+    this.galleryService.getPhotos().then(
+      dataObj => this.images = dataObj
+    )
   }
+  toggle(){
+    this.isToggle = !this.isToggle;
+    this.isArrowDownClicked = !this.isArrowDownClicked;
+  }
+
 
 }

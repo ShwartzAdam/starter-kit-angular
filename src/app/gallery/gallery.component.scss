@@ -1,27 +1,197 @@
+$background-section: #F2F2F2 ;
+$font-color-menu: #000;
+$font-color-hover: #baa57b;
 .container{
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: center;
-  flex-flow: row wrap;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 70% 30%;
 }
-.box{
-  margin:2em;
-  width: 250px;
-  min-height: 200px;
+
+.gallery-section{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  align-items: start;
+  justify-items: center;
+
+  margin-top:15vh;
+  margin-left:1.5vw;
+  margin-right: 1.5vw;
+  .gallery-section-box{
+    img{
+      border: 1px solid rgba(0,0,0,0.3);
+      box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+      max-width: 100%;
+    }
+    img:nth-child(2) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+  }
 }
-.box:hover{
-  border: 1px solid #000000;
+.gallery-side-nav{
+  background: $background-section;
+  height: 83vh;
+  width: 30vw;
+  position: fixed;
+  top:10vh;
+  right:0;
+  border-bottom: 1px solid #000;
+  font-size: 1em;
 }
-.oversize {
-  width: 100%;
-  height: auto;
+.gallery-side-nav-header{
+  h3 {
+    text-transform: uppercase;
+    text-align: center;
+    // margin-top: 2em;
+    #button-arrow{
+      display: none;
+    }
+  }
 }
-.card{
-  margin:2em;
-  width: 18rem;
-  min-height: 200px;
+.gallery-side-nav-body{
+  margin-top: 5em;
+  margin-left: 3.5em;
+  .category{
+    display: block;
+    margin-top:2em;
+    margin-bottom: 2em;
+  }
+  a{
+    font-size:1.25em;
+    color: $font-color-menu;
+    text-decoration:none;
+  }
+  a:hover {
+    color: $font-color-hover;
+  }
 }
-.card:hover{
-  border: 5px solid #fff;
+.gallery-side-nav-body-mobile{
+  display:none;
+}
+@media screen and (max-width: 1024px) {
+  .container{
+    grid-template-columns: 80% 20%;
+  }
+  .gallery-section{
+    //display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    //align-items: start;
+    //justify-items: center;
+
+    //margin-top:15vh;
+    //margin-left:1.5vw;
+    //margin-right: 1.5vw;
+    padding-bottom: 7.5vh;
+    .gallery-section-box{
+      img{
+        //border: 1px solid rgba(0,0,0,0.3);
+        //box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+        //max-width: 100%;
+      }
+      img:nth-child(2) {
+        grid-column: span 3;
+        grid-row: span 2;
+      }
+    }
+  }
+  .gallery-side-nav{
+    width: 20vw;
+    font-size:0.75em;
+  }
+  .gallery-side-nav-header{
+    h3 {
+      text-transform: uppercase;
+      text-align: center;
+      // margin-top: 2em;
+      #button-arrow{
+        display: none;
+      }
+    }
+  }
+  .gallery-side-nav-body{
+    margin-top: 5em;
+    margin-left: 3.5em;
+    .category{
+      display: block;
+      margin-top:2em;
+      margin-bottom: 2em;
+    }
+    a{
+      font-size:1.25em;
+      color: $font-color-menu;
+      text-decoration:none;
+    }
+    a:hover {
+      color: $font-color-hover;
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-section{
+    //display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    //align-items: start;
+    //justify-items: center;
+
+    margin-top:16vh;
+    //margin-left:1.5vw;
+    //margin-right: 1.5vw;
+    padding-bottom: 7.5vh;
+    .gallery-section-box{
+      img{
+        //border: 1px solid rgba(0,0,0,0.3);
+        //box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+        //max-width: 100%;
+      }
+      img:nth-child(2) {
+        grid-column: span 3;
+        grid-row: span 2;
+      }
+    }
+  }
+  .gallery-side-nav{
+    width: 100vw;
+    height: 5vh;
+  }
+  .gallery-side-nav-header{
+    h3 {
+      margin: 1em;
+      #button-arrow{
+        display: inline-block;
+        margin-left:2em;
+      }
+    }
+  }
+  .gallery-side-nav-body{
+    display:none;
+  }
+  .gallery-side-nav-body-mobile{
+    display: block;
+    background: $background-section;
+    margin:0;
+    height:90vh;
+    .category{
+      display: block;
+      margin-top: 1em;
+      border-bottom: 1px dotted #000;
+    }
+    a{
+      font-size:1.25em;
+      color: $font-color-menu;
+      text-decoration:none;
+      text-align: center;
+    }
+    a:hover {
+      color: $font-color-hover;
+    }
+  }
+
 }

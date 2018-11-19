@@ -19,13 +19,16 @@ import {trigger, transition, style, animate} from '@angular/animations';
 })
 export class HeaderComponent implements OnInit {
 
-  hidden: boolean = false;
+  hidden: boolean;
+  isToggle: boolean;
+
 
   constructor() {}
 
   ngOnInit() {}
 
   onToggle(){
-    this.hidden = !this.hidden ? true : false;
+    this.isToggle = !this.isToggle;
+    this.hidden = !this.hidden;
   }
 }

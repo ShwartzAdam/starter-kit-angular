@@ -9,6 +9,8 @@ $side-menu-color: #eee;
   height:10vh;
   justify-content: center;
   background: $background-header-color;
+  position: fixed;
+  width:100vw;
   .navbar-home-icon{
     display: flex;
     margin: auto;
@@ -68,6 +70,7 @@ $side-menu-color: #eee;
   }
   #side-bar-menu{
     position: fixed;
+    top:10vh;
     width:25vw;
     height:82.5vh;
     background: #baa57b ;
@@ -84,7 +87,6 @@ $side-menu-color: #eee;
       border-bottom: 0.3em solid #fff;
       padding-bottom:0.20em;
       font-size:1em;
-
     }
   }
 }
@@ -115,5 +117,4 @@ $side-menu-color: #eee;
   }
 
 }
-
 

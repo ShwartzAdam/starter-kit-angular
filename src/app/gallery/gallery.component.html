@@ -1,7 +1,31 @@
-<!--<app-loader [isLoading]="isLoading"></app-loader>-->
-<!--<div [hidden]="isLoading" class="container">-->
-  <!--<div *ngFor="let im of images" class="card">-->
-    <!--<img src="{{im.url}}" class="card-img-top">-->
-  <!--</div>-->
-<!--</div>-->
-<p>gallery</p>
+<div class="container">
+  <div class="gallery-section">
+    <div class="gallery-section-box" *ngFor="let image of images">
+        <img src="{{image.url}}">
+    </div>
+  </div>
+  <div class="gallery-side-nav">
+    <div class="gallery-side-nav-header">
+      <h3>Browse by categories
+        <span id='button-arrow'
+              class="fa"
+              [ngClass]="{ 'fa-arrow-up': !isToggle ,
+                         'fa-arrow-down': isToggle
+              }"
+              (click)="toggle()"
+        >
+        </span>
+      </h3>
+    </div>
+    <div class="gallery-side-nav-body">
+      <div *ngFor="let category of categories">
+        <a class="category" href="{{category.url}}">{{category.name}}</a>
+      </div>
+    </div>
+    <div class="gallery-side-nav-body-mobile" *ngIf="isArrowDownClicked" >
+      <div *ngFor="let category of categories">
+        <a class="category" href="{{category.url}}">{{category.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>
