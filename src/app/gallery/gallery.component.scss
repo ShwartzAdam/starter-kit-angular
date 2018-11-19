@@ -8,7 +8,7 @@ $font-color-hover: #baa57b;
 
 .gallery-section{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   align-items: start;
   justify-items: center;
@@ -42,7 +42,7 @@ $font-color-hover: #baa57b;
   h3 {
     text-transform: uppercase;
     text-align: center;
-    // margin-top: 2em;
+    margin-top: 2em;
     #button-arrow{
       display: none;
     }
@@ -103,7 +103,7 @@ $font-color-hover: #baa57b;
     h3 {
       text-transform: uppercase;
       text-align: center;
-      // margin-top: 2em;
+      margin-top: 2em;
       #button-arrow{
         display: none;
       }
@@ -136,12 +136,12 @@ $font-color-hover: #baa57b;
   }
   .gallery-section{
     //display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 10px;
     //align-items: start;
     //justify-items: center;
 
-    margin-top:16vh;
+    margin-top:17vh;
     //margin-left:1.5vw;
     //margin-right: 1.5vw;
     padding-bottom: 7.5vh;
@@ -153,17 +153,17 @@ $font-color-hover: #baa57b;
       }
       img:nth-child(2) {
         grid-column: span 3;
-        grid-row: span 2;
+        grid-row: span 3;
       }
     }
   }
   .gallery-side-nav{
     width: 100vw;
-    height: 5vh;
+    height: 42px;
   }
   .gallery-side-nav-header{
     h3 {
-      margin: 1em;
+      margin-top: 0.5em;
       #button-arrow{
         display: inline-block;
         margin-left:2em;
@@ -176,11 +176,11 @@ $font-color-hover: #baa57b;
   .gallery-side-nav-body-mobile{
     display: block;
     background: $background-section;
-    margin:0;
+    margin-top:16px;
     height:90vh;
     .category{
       display: block;
-      margin-top: 1em;
+      padding: 1em;
       border-bottom: 1px dotted #000;
     }
     a{

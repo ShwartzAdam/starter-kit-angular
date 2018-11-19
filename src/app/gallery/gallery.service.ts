@@ -23,7 +23,6 @@ export class GalleryService {
           photo.id = _obj[index]['id'];
           photo.url = _obj[index]['urls']['regular'];
           photo.urlSmall = _obj[index]['urls']['small'];
-          console.log(photo);
           this.photos.push(photo);
           index++;
           len--;

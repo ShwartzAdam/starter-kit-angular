@@ -1,7 +1,7 @@
 <div class="container">
   <div class="gallery-section">
     <div class="gallery-section-box" *ngFor="let image of images">
-        <img src="{{image.url}}">
+        <img [@zoomIn]="'in'" src="{{image.url}}">
     </div>
   </div>
   <div class="gallery-side-nav">
@@ -22,7 +22,7 @@
         <a class="category" href="{{category.url}}">{{category.name}}</a>
       </div>
     </div>
-    <div class="gallery-side-nav-body-mobile" *ngIf="isArrowDownClicked" >
+    <div [@slideInUp]="isArrowDownClicked" class="gallery-side-nav-body-mobile" *ngIf="isArrowDownClicked" >
       <div *ngFor="let category of categories">
         <a class="category" href="{{category.url}}">{{category.name}}</a>
       </div>
