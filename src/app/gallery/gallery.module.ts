@@ -6,9 +6,7 @@ import {GalleryService} from "@app/gallery/gallery.service";
 import {SharedModule} from "@app/shared";
 
 @NgModule({
-  imports: [ SharedModule,
-    CommonModule, GalleryRoutingModule
-  ],
+  imports: [ SharedModule, CommonModule, GalleryRoutingModule],
   declarations: [GalleryComponent],
   providers: [GalleryService]
 })
