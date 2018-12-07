@@ -7,9 +7,17 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdComponentsModule } from "@app/shared/md-components.module";
 
 @NgModule({
-  imports: [CommonModule, RouterModule,BrowserAnimationsModule ],
-  declarations: [HeaderComponent, ShellComponent, FooterComponent]
+  imports: [CommonModule,
+            RouterModule,
+            BrowserAnimationsModule,
+            MdComponentsModule
+  ],
+  declarations: [HeaderComponent,
+                 ShellComponent,
+                 FooterComponent
+  ]
 })
 export class ShellModule {}
